@@ -41,6 +41,7 @@ def groupAnagrams(strs: List[str]) -> List[List[str]]:
         for ch in s:
             count[ord(ch) - ord('a')] += 1
         hashmap[tuple(count)].append(s)
+        # 배열은 테이블의 키값으로 사용할수 없어 튜플로 변환
 
     return hashmap.values()
 
