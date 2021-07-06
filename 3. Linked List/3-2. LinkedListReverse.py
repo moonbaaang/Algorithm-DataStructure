@@ -8,12 +8,14 @@
  - 현재의 next를 prev를 가리키도록 업데이트
  - prev를 현재 노드로 이동
  - curr를 임시 저장 후 다음 노드로 이동
-'''
-#class Node:
-#    def __init__(self, val=0, next=None):
-#        self.val = val
-#        self.next = next
-def reverseList(head:ListNode)->ListNode:
+''' 
+class Node:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+
+def reverseList(head:Node)->Node:
     prev = None
     curr = head
 
@@ -34,7 +36,7 @@ def reverseList(head:ListNode)->ListNode:
 3. 스택의 모든 요소를 하나씩 꺼냄
  - 마지막 노드로부터 꺼내진 요소를 next 로 연결
 '''
-def reverseList(head:ListNode):
+def reverseList(head:Node):
     if head == None:
         return head
 
